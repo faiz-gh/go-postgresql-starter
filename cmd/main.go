@@ -24,7 +24,7 @@ func main() {
 }
 
 func initStorage(db *sql.DB) {
-	_, err := db.Exec("USE dev;")
+	err := db.Ping()
 	if err != nil {
 		log.Fatal(err)
 	}
