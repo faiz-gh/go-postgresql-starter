@@ -8,6 +8,10 @@ type UserStore interface {
 	CreateUser(User) error
 }
 
+type ProductStore interface {
+	GetProducts() ([]Product, error)
+}
+
 type User struct {
 	ID        int       `json:"id"`
 	FirstName string    `json:"first_name"`
